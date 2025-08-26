@@ -5,38 +5,68 @@
 @import "modern-resume-theme";
 
 /* 내 오버라이드 ↓↓↓ */
-
+/* =========================
+   1) 폰트(본문+제목 전부 강제)
+   ========================= */
 @font-face {
   font-family: 'GowunDodum';
-  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunDodum-Regular.woff') format('woff');
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunDodum-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
-:where(h1, h2, h3, h4, h5, h6),
-:where(.title, .sub-title, .section-title, .name, .page-title, .project-title) {
+html, body {
   font-family: 'GowunDodum', 'Helvetica Neue', Arial, sans-serif !important;
-  font-weight: 400;
 }
 
-.avatar, .profile, .picture, .about .profile,
-.avatar img, .profile img, .picture img, .about .profile img,
-img[src$="/images/profile.jpg"] {
+/* 제목/섹션 타이틀까지 모두 강제 */
+h1, h2, h3, h4, h5, h6,
+.title, .sub-title, .section-title, .page-title, .name, .project-title, .experience-title {
+  font-family: 'GowunDodum', 'Helvetica Neue', Arial, sans-serif !important;
+  font-weight: 400; /* 필요하면 500~600으로 조정 */
+}
+
+/* =========================
+    2) 프로필(원형 마스크 해제)
+    - 이 테마는 배경이미지 방식(.profile-img)으로 아바타를 그림
+    - 따라서 해당 요소 자체의 원형/마스크/그림자까지 끊어야 함
+    ========================= */
+
+/* 크기/자르기/정렬: 원하는 사이즈로 수정 가능 (220 권장) */
+.profile-img,
+.profile-img.profile-img { /* 특이도 올리기용 중복 선언 */
   width: 220px !important;
   height: 220px !important;
-  display: block;
-  object-fit: cover !important;
-  border-radius: 16px !important;
-  overflow: hidden !important;
+  margin: 0 auto 20px !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+
+  /* 원형/마스크/클립/그림자 제거 */
+  border-radius: 16px !important;          /* ← 둥근 사각형 */
+  -webkit-mask-image: none !important;
+  mask-image: none !important;
+  clip-path: none !important;
+  box-shadow: none !important;
 }
 
-.avatar, .profile, .picture, .about .profile {
+/* 혹시 상위 래퍼나 상태 클래스가 원형을 강제하면 같이 무력화 */
+.profile, .avatar, .picture, .about .profile,
+.profile.round, .avatar.round, .picture.round,
+.profile.circle, .avatar.circle, .picture.circle {
   border-radius: 16px !important;
   -webkit-mask-image: none !important;
   mask-image: none !important;
   clip-path: none !important;
+  overflow: hidden !important;
 }
 
-.avatar.round, .profile.round, .picture.round, .avatar.circle, .profile.circle, .picture.circle {
+/* 만약 <img>로 렌더되는 경우까지 함께 커버 (안전망) */
+.profile img, .avatar img, .picture img {
+  width: 220px !important;
+  height: 220px !important;
+  object-fit: cover !important;
   border-radius: 16px !important;
+  display: block;
+  overflow: hidden !important;
 }
