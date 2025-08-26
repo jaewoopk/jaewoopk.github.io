@@ -1,120 +1,81 @@
 # Site
-repository: sproogen/resume-theme
-favicon: images/favicon.ico
+url: "https://jaewoopk.github.io"
+baseurl: ""                         # 유저 페이지는 빈 값
+repository: "jaewoopk/jaewoopk.github.io"
+#favicon: images/favicon.ico         # 실제 파일 있으면 유지, 없으면 주석 처리
 
 # Content configuration version
 version: 2
 
-# Personal info
-name: Brett Harris
-title: Senior Network System Administrator
-email: brett.h@email.co.uk
-website: www.github.com/sproogen/resume-theme
+# Personal info (당신 정보로 교체)
+name: 박재우
+title: Backend Engineer (Finance IT)
+email: jaewoopk000@naver.com
+website: https://github.com/jaewoopk
 
 # Dark Mode (true/false/never)
-darkmode: false
+darkmode: true
 
-# Social links
-twitter_username: facespics
-github_username:  sproogen
-# stackoverflow_username: "00000001"
-# dribbble_username: jekyll
-# facebook_username: jekyll
-# flickr_username: jekyll
-instagram_username: jameswgrant
-linkedin_username: jameswgrant
-# xing_username: jekyll
-# pinterest_username: jekyll
-youtube_username: globalmtb
-# googleplus_username: +jekyll
-# orcid_username: 0000-0000-0000-0000
+# Social links (당신 계정으로 수정)
+github_username:  jaewoopk
+linkedin_username: your-linkedin
+instagram_username: your-instagram
+# 필요 없는 항목은 지워도 됩니다
 
-# Additional icon links
+# Additional icon links (불필요 키 제거)
 additional_links:
-- title: itsgoingto.be
-  icon: fas fa-globe
-  url: https://www.itsgoingto.be
-# - title: another link
-#   icon: font awesome brand icon name (eg. fab fa-twitter) (https://fontawesome.com/icons?d=gallery&m=free)
-#   url: Link url (eg. https://google.com)
-
-# Google Analytics and Tag Manager
-# Using more than one of these may cause issues with reporting
-# gtm: "GTM-0000000"
-# gtag: "UA-00000000-0"
-# google_analytics: "UA-00000000-0"
+  - title: Blog (Tistory)
+    icon: fas fa-blog
+    url: "https://jaewoopk.github.io"   # 원하면 다른 링크로
 
 # About Section
-# about_title: About Me
-about_profile_image: images/profile.jpg
-about_content: | # this will include new lines to allow paragraphs
-  Hi, my name's Brett and I'm a senior network system administrator. As well as administrating systems I also have experience making software and web apps. I have worked at a number of companies gaining teamwork and leadership skills.
+#about_profile_image: images/profile.jpg  # 실제 파일 넣기
+about_content: |
+  안녕하세요. 금융권 배치/OLTP 시스템을 개발·운영하며 레거시 고도화와 성능/안정성 개선에 집중하고 있습니다.
+  C/Pro*C, Oracle, Unix/Linux 기반에서 Spring Batch로의 전환을 주도하고 있습니다.
 
-  I am most skilled in: <mark>AWS</mark> and <mark>Eating Pizza</mark>
+  가장 자신 있는 분야는 <mark>펌뱅킹 배치</mark>, <mark>파일→DB→파일</mark> 파이프라인 고도화입니다.
 
+# 본문 섹션(원하는 대로 정리)
 content:
-  - title: Projects # Title for the section
-    layout: list # Type of content section (list/text)
+  - title: Projects
+    layout: list
     content:
       - layout: top-middle
-        title: Super awesome project
-        link: github.com/sproogen
-        # link_text: Project Website
+        title: minibank 프로젝트
+        link: https://github.com/jaewoopk/minibank
         additional_links:
-          - title:  sproogen/modern-resume-theme
+          - title: GitHub
             icon: fab fa-github
-            url: github.com/sproogen/modern-resume-theme
-          # - title:  Github page for project (eg. sproogen/modern-resume-theme)
-          #   icon: fab fa-github
-          #   url: Link to project (eg. sproogen.github.io/modern-resume-theme)
+            url: https://github.com/jaewoopk/minibank
         quote: >
-          This is probably one of the greatest apps ever created, if you don't agree you're probably wrong.
-        description: | # this will include new lines to allow paragraphs
-          I started this project as a way if learning <mark>React</mark> and it has since grown into a fully fledged app. I have learned many skills through this and been I'm very proud of having this in my portfolio. If you don't have a project as awesome as this I would advise you make one.
+          Spring Boot + Spring Batch로 File→DB→File 파이프라인 시뮬레이터
+        description: |
+          레거시 C/Pro*C 기반 배치를 메타데이터·DTO 기반으로 전환하며 공통화, 유지보수성, 성능을 개선했습니다.
 
-  - title: Experience # Title for the section
-    layout: list # Type of content section (list/text)
+  - title: Experience
+    layout: list
     content:
       - layout: left
-        title: The Boring Company
-        link: boringcompany.com
-        # link_text: boringcompany.com
-        sub_title: Senior Network System Administrator
-        caption: November 2017 - Present
-        quote: >
-          Solving 21st century problems by diging holes and making game changing products like the *not a flamethrower*
-        description: | # this will include new lines to allow paragraphs
-            Every company needs its networks properly administered and The Boring Compay is no exception. Digging holes is hard and I play my part making sure the whole company stays connected. I lead a team of 5 people and enjoy driving the company to try new technologies.
+        title: (회사명)
+        sub_title: Backend/Batch Developer
+        caption: 20XX.XX - Present
+        description: |
+          - 펌뱅킹 자동이체 공통모듈화, 신규 업체 연동 1주 → 1일
+          - 장애 월 5건 → 1건 이하, 처리속도 2배 개선 등
 
-  - title: Education # Title for the section
-    layout: list # Type of content section (list/text)
+  - title: Education
+    layout: list
     content:
       - layout: left
-        title: Harvard University
-        caption: 2010 - 2013
-        sub_title: BSc Computer Science
-        quote: >
-          Established in 1636, Harvard is the oldest higher education institution in the United States, and is widely regarded in terms of its influence, reputation, and academic pedigree as a leading university in not just the US but also the world.
-        description: | # this will include new lines to allow paragraphs
-          During my time at Harvard I learnt most of my key skills that have I have taken through my career such as teamwork and working to tight deadlines. I thouroughly enjoyed my time as university and learnt a lot about a healthy work life balance.
-
-          I spent a lot of my free time as a committee member of the *Harvard Mountaineering Club* taking on roles such as *Trip Secretary* and *Vice-President*.
-
-  - title: A Little More About Me
-    layout: text
-    content: | # this will include new lines to allow paragraphs
-      Alongside my interests in networks and software engineering some of my other interests and hobbies are:
-      - Rock climbing
-      - Gaming
-      - Knitting
-      - [Becoming a ninja](https://www.youtube.com/watch?v=vtg4o__aRMg)
-
-      Look at this cool image  
-      ![Trees](/modern-resume-theme/images/landscape-trees.jpg "Trees")
+        title: (학교명)
+        sub_title: (전공)
+        caption: YYYY - YYYY
+        description: |
+          관련 과목, 프로젝트 간단 요약
 
 # Footer
 footer_show_references: true
-# references_title: References on request (Override references text)
 
 # Build settings
 remote_theme: sproogen/resume-theme
@@ -124,4 +85,4 @@ sass:
   style: compressed
 
 plugins:
- - jekyll-seo-tag
+  - jekyll-seo-tag
