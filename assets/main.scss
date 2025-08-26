@@ -1,28 +1,46 @@
 ---
-# Front matter comment to ensure Jekyll properly reads file.
+# empty front matter
 ---
 
-@import 'modern-resume-theme';
+@import "modern-resume-theme";
 
+/* 내 오버라이드 ↓↓↓ */
+
+/* 폰트 */
 @font-face {
   font-family: 'GowunDodum';
   src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunDodum-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
-
-body {
-  font-family: 'GowunDodum', 'Helvetica Neue', Arial, sans-serif;
+html, body {
+  font-family: 'GowunDodum', 'Helvetica Neue', Arial, sans-serif !important;
 }
 
-img[src*="profile"] {
-  width: 220px;     
-  height: 220px;    
-  border-radius: 16px !important;  
-  object-fit: cover;               
-}
-
-.about, .about-section, .profile, .picture, .avatar {
+/* 프로필 이미지: <img> 케이스 */
+.profile-pic,
+.profile img,
+.about .profile img,
+img[src$="/images/profile.jpg"] {
+  width: 220px !important;
+  height: 220px !important;
+  object-fit: cover !important;
   border-radius: 16px !important;
+  display: block;
   overflow: hidden;
+}
+
+/* 혹시 background-image로 그려질 경우까지 커버 */
+.profile, .picture, .avatar {
+  width: 220px !important;
+  height: 220px !important;
+  border-radius: 16px !important;
+  background-size: cover !important;
+  background-position: center !important;
+  overflow: hidden;
+}
+
+/* 혹시 테마가 원형을 강제하는 클래스가 있으면 덮어쓰기 */
+.profile.round, .picture.round, .avatar.round {
+  border-radius: 16px !important;
 }
