@@ -3,3 +3,26 @@
 ---
 
 @import 'modern-resume-theme';
+
+@font-face {
+  font-family: 'GowunDodum';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunDodum-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'GowunDodum', 'Helvetica Neue', Arial, sans-serif;
+}
+
+img[src*="profile"] {
+  width: 220px;     
+  height: 220px;    
+  border-radius: 16px !important;  
+  object-fit: cover;               
+}
+
+.about, .about-section, .profile, .picture, .avatar {
+  border-radius: 16px !important;
+  overflow: hidden;
+}
