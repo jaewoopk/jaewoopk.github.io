@@ -6,41 +6,37 @@
 
 /* 내 오버라이드 ↓↓↓ */
 
-/* 폰트 */
 @font-face {
   font-family: 'GowunDodum';
   src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunDodum-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
-html, body {
+
+:where(h1, h2, h3, h4, h5, h6),
+:where(.title, .sub-title, .section-title, .name, .page-title, .project-title) {
   font-family: 'GowunDodum', 'Helvetica Neue', Arial, sans-serif !important;
+  font-weight: 400;
 }
 
-/* 프로필 이미지: <img> 케이스 */
-.profile-pic,
-.profile img,
-.about .profile img,
+.avatar, .profile, .picture, .about .profile,
+.avatar img, .profile img, .picture img, .about .profile img,
 img[src$="/images/profile.jpg"] {
   width: 220px !important;
   height: 220px !important;
+  display: block;
   object-fit: cover !important;
   border-radius: 16px !important;
-  display: block;
-  overflow: hidden;
+  overflow: hidden !important;
 }
 
-/* 혹시 background-image로 그려질 경우까지 커버 */
-.profile, .picture, .avatar {
-  width: 220px !important;
-  height: 220px !important;
+.avatar, .profile, .picture, .about .profile {
   border-radius: 16px !important;
-  background-size: cover !important;
-  background-position: center !important;
-  overflow: hidden;
+  -webkit-mask-image: none !important;
+  mask-image: none !important;
+  clip-path: none !important;
 }
 
-/* 혹시 테마가 원형을 강제하는 클래스가 있으면 덮어쓰기 */
-.profile.round, .picture.round, .avatar.round {
+.avatar.round, .profile.round, .picture.round, .avatar.circle, .profile.circle, .picture.circle {
   border-radius: 16px !important;
 }
