@@ -35,15 +35,15 @@ h1, h2, h3, h4, h5, h6,
 /* 크기/자르기/정렬: 원하는 사이즈로 수정 가능 (220 권장) */
 .profile-img,
 .profile-img.profile-img { /* 특이도 올리기용 중복 선언 */
-  width: 220px !important;
-  height: 220px !important;
+  width: 120px !important;
+  height: 160px !important;
   margin: 0 auto 20px !important;
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
 
   /* 원형/마스크/클립/그림자 제거 */
-  border-radius: 16px !important;          /* ← 둥근 사각형 */
+  border-radius: 8px !important;          /* ← 둥근 사각형 */
   -webkit-mask-image: none !important;
   mask-image: none !important;
   clip-path: none !important;
@@ -54,7 +54,7 @@ h1, h2, h3, h4, h5, h6,
 .profile, .avatar, .picture, .about .profile,
 .profile.round, .avatar.round, .picture.round,
 .profile.circle, .avatar.circle, .picture.circle {
-  border-radius: 16px !important;
+  border-radius: 8px !important;
   -webkit-mask-image: none !important;
   mask-image: none !important;
   clip-path: none !important;
@@ -63,10 +63,10 @@ h1, h2, h3, h4, h5, h6,
 
 /* 만약 <img>로 렌더되는 경우까지 함께 커버 (안전망) */
 .profile img, .avatar img, .picture img {
-  width: 220px !important;
-  height: 220px !important;
+  width: 120px !important;
+  height: 160px !important;
   object-fit: cover !important;
-  border-radius: 16px !important;
+  border-radius: 8px !important;
   display: block;
   overflow: hidden !important;
 }
