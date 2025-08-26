@@ -56,7 +56,7 @@ content:
       - layout: left
         title: 금융결제원 EDI 송수신 공통 모듈 개발 (레거시 개선)
         link: "https://dev-market.tistory.com/entry/2-%EC%A0%95%ED%99%95%ED%95%9C-%EC%A0%95%EB%B3%B4%EB%A5%BC-%EC%A6%89%EC%8B%9C-%EA%B7%B8%EB%A6%AC%EA%B3%A0-%EB%82%AE%EC%9D%80-%EC%A7%80%EC%97%B0%EC%9C%A8%EB%A1%9C"
-        link_text: [4] 각기 다른 100여개의 송수신 프로세스, 공통 모듈로 탄생시킬 수는 없을까?
+        link_text: "[4] 각기 다른 100여개의 송수신 프로세스, 공통 모듈로 탄생시킬 수는 없을까?"
         additional_links:
           - title: Blog (Tistory)
             icon: fab fa-house
@@ -70,7 +70,7 @@ content:
       - layout: left
         title: 파일 송수신 알림 시스템 이관 (문자 -> 협업툴 등록)
         link: "https://dev-market.tistory.com/entry/%EB%AA%A8%EB%8B%88%ED%84%B0%EB%A7%81-%EC%95%8C%EB%A6%BC-%EB%AC%B8%EC%9E%90-%EC%88%98%EC%8B%A0%EC%97%90%EC%84%9C-%ED%98%91%EC%97%85%ED%88%B4-%EB%93%B1%EB%A1%9D%EC%9C%BC%EB%A1%9C-1"
-        link_text: [1] 모니터링 알림, 문자 수신에서 협업툴 등록으로
+        link_text: "[1] 모니터링 알림, 문자 수신에서 협업툴 등록으로"
         additional_links:
           - title: Blog (Tistory)
             icon: fab fa-house
