@@ -23,7 +23,7 @@ html, body {
 h1, h2, h3, h4, h5, h6,
 .title, .sub-title, .section-title, .page-title, .name, .project-title, .experience-title {
   font-family: 'GowunDodum', 'Helvetica Neue', Arial, sans-serif !important;
-  font-weight: 400; /* 필요하면 500~600으로 조정 */
+  font-weight: 450; /* 필요하면 500~600으로 조정 */
 }
 
 /* =========================
@@ -35,8 +35,8 @@ h1, h2, h3, h4, h5, h6,
 /* 크기/자르기/정렬: 원하는 사이즈로 수정 가능 (220 권장) */
 .profile-img,
 .profile-img.profile-img { /* 특이도 올리기용 중복 선언 */
-  width: 120px !important;
-  height: 160px !important;
+  width: 150px !important;
+  height: 200px !important;
   margin: 0 auto 20px !important;
   background-size: cover !important;
   background-position: center !important;
@@ -63,8 +63,8 @@ h1, h2, h3, h4, h5, h6,
 
 /* 만약 <img>로 렌더되는 경우까지 함께 커버 (안전망) */
 .profile img, .avatar img, .picture img {
-  width: 120px !important;
-  height: 160px !important;
+  width: 150px !important;
+  height: 200px !important;
   object-fit: cover !important;
   border-radius: 8px !important;
   display: block;
