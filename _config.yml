@@ -42,10 +42,10 @@ content:
     content:
       - layout: left
         title: 쿠콘
-        sub_title: Server Developer
-        caption: 2024.04 - 현재
-        summary: |
-            <a href="https://www.coocon.net/corp.act" target="_blank" rel="noopener">https://www.coocon.net/</a>
+        sub_title: |
+            <a href="https://www.coocon.net/corp.act" target="_blank" rel="noopener">https://www.coocon.net/</a><br>
+            Server Developer
+        caption: 2024.04 ~ 현재
         description: |
           - 펌뱅킹 배치 시스템 출금동의, 입금이체, 출금이체 **약 월 5천만 건** 운영
           - **[레거시 개선]**
