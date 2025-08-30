@@ -1,0 +1,30 @@
+/* assets/css/print.css */
+@media print {
+  /* 종이 크기/여백을 PDF와 일치 */
+  @page { size: A4; margin: 10mm; }
+
+  html, body { width: 210mm; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+  /* 한국어 줄바꿈 깔끔하게 */
+  body { word-break: keep-all; line-break: loose; }
+
+  /* 화면 전용 요소 숨기기 (필요에 맞게 수정) */
+  nav, footer, .no-print, .site-header, .site-footer { display: none !important; }
+
+  /* 색상/배경 유지 */
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+  /* 링크 뒤에 URL 자동표시 제거 */
+  a[href]:after { content: "" !important; }
+
+  /* 섹션 단위로 쪼개지지 않도록 */
+  section, article, .section, .item, h2, h3, ul, li, img, pre, code, blockquote {
+    break-inside: avoid; page-break-inside: avoid;
+  }
+
+  /* 그리드/플렉스가 잘리는 테마는 한 열로 단순화(필요 시) */
+  .columns, .row { display: block !important; }
+  .column { width: auto !important; }
+
+  /* 그림자/과한 보더 제거로 인쇄 품질 개선(옵션) */
+  .card, .panel { box-shadow: none !important; border-color: #ddd !important; }
+}

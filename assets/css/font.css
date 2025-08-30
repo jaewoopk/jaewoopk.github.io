@@ -1,0 +1,10 @@
+/* assets/css/fonts.css */
+@font-face {
+  font-family: 'GowunDodum';
+  src: url('{{ "/assets/fonts/GowunDodum-Regular.woff2" | relative_url }}') format('woff2'),
+       url('{{ "/assets/fonts/GowunDodum-Regular.woff"  | relative_url }}') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+body { font-family: 'GowunDodum', system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans KR', sans-serif; }
