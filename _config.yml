@@ -102,9 +102,10 @@ content:
   - title: Skill
     layout: list
     content:
-      - layout: left
+      - layout: top-middle
         description: |
-            - C, pro*c, Oracle, Unix(AIX)/Linux(CentOS), socket programming, IPC(Message Queue), Jenkins 
+            - C, Pro*C, Oracle, Unix(AIX)/Linux(CentOS) 기반 Multi-Process Batch & Real-Time System, Socket Programming, IPC(Message Queue), Jenkins
+
 
   - title: Education
     layout: list
